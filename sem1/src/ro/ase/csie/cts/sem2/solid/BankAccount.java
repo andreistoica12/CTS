@@ -13,6 +13,7 @@ public class BankAccount {
 	}
 	
 	public void withdraw(long amount) {
+		System.out.println("withdrawing " + amount + " from " + iban);
 		this.balance -= amount;
 	}
 	

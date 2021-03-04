@@ -3,6 +3,8 @@ package ro.ase.csie.cts.sem2;
 import java.math.BigDecimal;
 
 import ro.ase.csie.cts.sem2.solid.BankAccount;
+import ro.ase.csie.cts.sem2.solid.FeeBankAccount;
+import ro.ase.csie.cts.sem2.solid.InsufficientFundsException;
 import ro.ase.csie.cts.sem2.solid.Person;
 
 public class Main {
@@ -32,10 +34,30 @@ public class Main {
 		BankAccount account = new BankAccount("INGB12341234", p);
 		
 		account.deposit(100);
-		account.withdraw(50);
-		account.withdraw(70);
+		try {
+			account.withdraw(50);
+			account.withdraw(40);
+			account.withdraw(70);
+
+		} catch (InsufficientFundsException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		System.out.println(account.getBalance());
+		
+		FeeBankAccount fba = new FeeBankAccount("INFG12343583525245", p);
+		
+		fba.deposit(500);
+		
+		try {
+			fba.withdraw(100);
+		} catch (InsufficientFundsException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println(fba.getBalance());
+
+		
 
 	}
 }

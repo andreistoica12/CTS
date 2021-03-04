@@ -12,7 +12,9 @@ public class BankAccount {
 		this.balance = 0;
 	}
 	
-	public void withdraw(long amount) {
+	public void withdraw(long amount) throws InsufficientFundsException {
+		if(amount > balance) 
+			throw new InsufficientFundsException("Insufficient funds " + this.balance);
 		System.out.println("withdrawing " + amount + " from " + iban);
 		this.balance -= amount;
 	}

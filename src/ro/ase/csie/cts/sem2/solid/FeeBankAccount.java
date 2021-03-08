@@ -10,7 +10,7 @@ public class FeeBankAccount extends BankAccount {
 	
 	@Override
 	public void withdraw(long amount) throws InsufficientFundsException {
-		System.out.println("Addign " + fee + " fee to withdrawal");
+		System.out.println("Assign " + fee + " fee to withdrawal");
 		super.withdraw(amount + 2);
 	}
 	

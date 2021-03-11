@@ -74,6 +74,14 @@ public class Person {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
+
+	public NotificationService getNotificationService() {
+		return notificationService;
+	}
+
+	public void setNotificationService(NotificationService notificationService) {
+		this.notificationService = notificationService;
+	}
 	
 	
 	

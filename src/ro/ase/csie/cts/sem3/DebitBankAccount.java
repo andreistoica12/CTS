@@ -14,7 +14,7 @@ public class DebitBankAccount extends BankAccount implements Payable, Receivable
 	public void withdraw(long amount) throws InsufficientFundsException {
 		if (amount > balance)
 			throw new InsufficientFundsException("Insufficient funds " + balance);
-		notificationService.sendNotification(accountHolder, "withdrawing " + amount + " from " + iban);
+		notificationService.sendNotification(accountHolder, "Withdrawing " + amount + " from " + iban);
 		balance -= amount;
 	}
 

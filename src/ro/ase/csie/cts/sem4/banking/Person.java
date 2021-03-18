@@ -10,17 +10,32 @@ public class Person {
 	
 	private Date birthDate;
 	
+	private Integer age;
+	
 	private long salary;
 	
 	private String email;
 	
 	private String mobile;
 	
-	private NotificationService notificationService;
+	private NotificationType notificationType;
 	
 	public static enum NotificationType {
-		EMAIL,
+		EMAIL {
+			@Override
+			public NotificationService getNotificationService() {
+				return new EmailNotificationService();
+			}
+		},
 		SMS
+		{
+			@Override
+			public NotificationService getNotificationService() {
+				return new SMSNotificationService();
+			}
+		};
+
+		public abstract NotificationService getNotificationService();
 	}
 	
 	public Person(String name) {
@@ -51,6 +66,14 @@ public class Person {
 		this.birthDate = birthDate;
 	}
 
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
 	public long getSalary() {
 		return salary;
 	}
@@ -75,15 +98,12 @@ public class Person {
 		this.mobile = mobile;
 	}
 
-	public NotificationService getNotificationService() {
-		return notificationService;
+	public NotificationType getNotificationType() {
+		return notificationType;
 	}
 
-	public void setNotificationService(NotificationService notificationService) {
-		this.notificationService = notificationService;
+	public void setNotificationType(NotificationType notificationType) {
+		this.notificationType = notificationType;
 	}
-	
-	
-	
 
 }

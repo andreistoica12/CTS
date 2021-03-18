@@ -9,6 +9,10 @@ import ro.ase.csie.cts.sem4.banking.DebitBankAccount;
 import ro.ase.csie.cts.sem4.banking.EmailNotificationService;
 import ro.ase.csie.cts.sem4.banking.NotificationService;
 import ro.ase.csie.cts.sem4.banking.Person;
+import ro.ase.csie.cts.sem4.singleton.Elvis;
+import ro.ase.csie.cts.sem4.singleton.Elvis2;
+import ro.ase.csie.cts.sem4.singleton.Elvis3;
+import ro.ase.csie.cts.sem4.singleton.ElvisV2;
 
 public class Main {
 
@@ -33,6 +37,22 @@ public class Main {
 		b.deposit(50);
 		
 		System.out.println(b.toString());
+		
+		Elvis elvis = Elvis.theTrueElvis;		
+		elvis.sing();
+		
+		Elvis2 elvis2 = Elvis2.getInstance();
+		elvis2.sing();
+		Elvis2 elvis22 = Elvis2.getInstance();
+		
+		System.out.println(elvis2 == elvis22);
+		
+		Elvis3 elvis3 = Elvis3.getInstance();
+		elvis3.sing();
+		
+		ElvisV2 elvisV2 = ElvisV2.INSTANCE;
+		elvisV2.sing();
+				
 	}
 
 }

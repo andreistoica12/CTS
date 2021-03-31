@@ -34,6 +34,8 @@ public class Model3DCaracter implements Cloneable {
 		}
 	}
 	
+	// am nevoie de constructorul default private
+	// => il pastrez pentru a avea un container in care sa pun viitori valori
 	private Model3DCaracter() {
 		
 	}

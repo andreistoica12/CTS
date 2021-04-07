@@ -10,7 +10,9 @@ public abstract class SuperErouAbstract {
 		this.puncteViata = puncteViata;
 	}
 
-
+	public void setPuncteViata(int puncteViata) {
+		this.puncteViata = puncteViata;
+	}
 
 	public abstract void seDeplaseaza();
 }

@@ -1,6 +1,8 @@
+**ADAPTER
 1. Utilizarea unei librarii externe ce contine caractere Disney.
 - in prezent jocul contine caractere proprii ce fac parte din framework-ul ACME
 
+**DECORATOR: keyword = run-time
 2. Modificarea in timpul jocului a caracteristicilor unor super-eroi
 - in timpul jocului super-eroii pot fi dotati cu echipamente noi
 - comportamentul super-eroului se poate modifica dinamic in functie de interactiunea cu celelalte caractere din joc

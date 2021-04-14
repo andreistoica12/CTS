@@ -27,6 +27,9 @@ dar si fara a permite programatorilor sa omita unele dintre ele
 - jocul permite alegerea unei teme care influenteaza colectia de personaje; trebuie utilizata o metoda eficienta care sa pemita jocului
 utilizarea oricarei teme fara a modifica major functionalitatea
 
+
+-------------- PATTERN-URI STRUCTURALE ---------------------
+
 **FACADE
 5. Pentru a permite altor companii sau jucatorilor sa dezvolte solutii externe care sa se conecteze la joc trebuie dezvoltata o librarie (un API)
 - API-ul contine multe clase cu multe detalii

@@ -17,15 +17,16 @@
 
 Pentru dezvoltarea unui joc online (cu supereroi) sa se dezvolte o solutie software care
 
-**COMPOSITE
+**COMPOSITE -> se aplica de la inceput (din partea de analiza), nu se poate adapta
 1. Pentru a gestiona O STRUCTURA IERARHICA DE CARACTERE (de ex o armata sau un grup de jucatori)
 - sa se gaseasca o solutie eficienta care SA PERMITA GRUPAREA JUCATORILOR
 - UN GRUP POATE CONTINE CARACTERE CONTROLATE de jucatori sau alte grupuri
 
-2. Pentru a gestiona eficient (din punct de vedere al memoriei) scenariile in care jucatorii interactioneaza cu 
+**FLYWEIGHT -> se aplica de la inceput (din partea de analiza), nu se poate adapta
+2. Pentru A GESTIONA EFICIENT (DIN PUNCTUL DE VEDERE AL MEMORIEI) scenariile in care jucatorii interactioneaza cu 
 mai multe caractere controlate de calculator
-- colectia de caractere coordonate de calculator contine elemente de acelasi fel (aceleasi modele 3D)
+- colectia de caractere coordonate de calculator CONTINE ELEMENTE DE ACELASI FEL (aceleasi modele 3D)
 - spatiul ocupat de un model 3D este semnificativ
-- generarea unui astfel de scenariu necesita un spatiu semnificativ de memorie pentru client
-- modelele 3D sunt afisate pe ecran la coordonate diferite si pot avea texturi de culori diferite
+- generarea unui astfel de scenariu NECESITA UN SPATIU SEMNIFICATIV DE MEMORIE pentru client
+- modelele 3D sunt AFISATE PE ECRAN LA COORDONATE DIFERITE SI POT AVEA TEXTURI DE CULORI DIFERITE
 - trebuie gasita o solutie eficienta privind gestiunea acestor situatii

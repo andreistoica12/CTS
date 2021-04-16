@@ -28,14 +28,6 @@ dar si fara a permite programatorilor sa omita unele dintre ele
 utilizarea oricarei teme fara a modifica major functionalitatea
 
 
--------------- PATTERN-URI STRUCTURALE ---------------------
-
-**FACADE
-5. Pentru a permite altor companii sau jucatorilor sa dezvolte solutii externe care sa se conecteze la joc trebuie dezvoltata o librarie (un API)
-- API-ul contine multe clase cu multe detalii
-- nu toate clasele sunt documentate
-- API-ul trebuie sa ofere o interfata simplificata pentru un set de functii de baza
-
 
 
 

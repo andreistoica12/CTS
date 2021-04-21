@@ -41,11 +41,15 @@ mai multe caractere controlate de calculator
 - SE DORESTE MODIFICAREA MODULULUI DE LOGIN PRIN LIMITAREA NUMARULUI DE INCERCARI LA MAXIM 3
 - MODULUL DE LOGIN EXISTENT TREBUIE MODIFICAT FARA A INTRERUPE JOCUL
 
+
+**STRATEGY
 7. In functie de implicarea in joc (timp petrecut, activitate in timpul jocului, etc) jucatorii primesc puncte bonus. 
 Aceasta strategie este stabilita de departamentul de marketing si se modifica in functie de alte campanii, perioada anului, etc.
 Sa se gaseasca o solutie care sa permita:
 - modificarea strategiei de acordare a bonusului la runtime fara a modifica implementarea jocului
 
+
+**STATE MACHINE
 8. Comportamentul caracterul este influentat de stare lui
 - daca acesta este ranit miscarile sunt afectate
 - daca este afectat de actiunile magice ale celorla

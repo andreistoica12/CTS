@@ -18,15 +18,35 @@
 Pentru dezvoltarea unui joc online (cu supereroi) sa se dezvolte o solutie software care
 
 **COMPOSITE -> se aplica de la inceput (din partea de analiza), nu se poate adapta
-1. Pentru a gestiona O STRUCTURA IERARHICA DE CARACTERE (de ex o armata sau un grup de jucatori)
+4. Pentru a gestiona O STRUCTURA IERARHICA DE CARACTERE (de ex o armata sau un grup de jucatori)
 - sa se gaseasca o solutie eficienta care SA PERMITA GRUPAREA JUCATORILOR
 - UN GRUP POATE CONTINE CARACTERE CONTROLATE de jucatori sau alte grupuri
 
 **FLYWEIGHT -> se aplica de la inceput (din partea de analiza), nu se poate adapta
-2. Pentru A GESTIONA EFICIENT (DIN PUNCTUL DE VEDERE AL MEMORIEI) scenariile in care jucatorii interactioneaza cu 
+5. Pentru A GESTIONA EFICIENT (DIN PUNCTUL DE VEDERE AL MEMORIEI) scenariile in care jucatorii interactioneaza cu 
 mai multe caractere controlate de calculator
 - colectia de caractere coordonate de calculator CONTINE ELEMENTE DE ACELASI FEL (aceleasi modele 3D)
 - spatiul ocupat de un model 3D este semnificativ
 - generarea unui astfel de scenariu NECESITA UN SPATIU SEMNIFICATIV DE MEMORIE pentru client
 - modelele 3D sunt AFISATE PE ECRAN LA COORDONATE DIFERITE SI POT AVEA TEXTURI DE CULORI DIFERITE
 - trebuie gasita o solutie eficienta privind gestiunea acestor situatii
+
+
+**PROXY => "the man in the middle"
+		=> pentru solutii ad-hoc, nu stii ce e acolo, dar ai nevoie sa faca ceva
+		=> conectare in cloud in continuare, dar vrei sa faci si log-uri
+6. Adaugarea unui filtru suplimentar pentru login
+- in acest moment login-ul se face prin username si parola si in cazul in care parola este gresita utilizatorul poate incerca de mai multe ori
+- exista atacuri asupra conturilor jucatorilor iar atacatorul ghiceste parola aferenta contului dupa mai multe incercari
+- SE DORESTE MODIFICAREA MODULULUI DE LOGIN PRIN LIMITAREA NUMARULUI DE INCERCARI LA MAXIM 3
+- MODULUL DE LOGIN EXISTENT TREBUIE MODIFICAT FARA A INTRERUPE JOCUL
+
+7. In functie de implicarea in joc (timp petrecut, activitate in timpul jocului, etc) jucatorii primesc puncte bonus. 
+Aceasta strategie este stabilita de departamentul de marketing si se modifica in functie de alte campanii, perioada anului, etc.
+Sa se gaseasca o solutie care sa permita:
+- modificarea strategiei de acordare a bonusului la runtime fara a modifica implementarea jocului
+
+8. Comportamentul caracterul este influentat de stare lui
+- daca acesta este ranit miscarile sunt afectate
+- daca este afectat de actiunile magice ale celorla
+

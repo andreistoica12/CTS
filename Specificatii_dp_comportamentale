@@ -48,6 +48,10 @@ DIFERITELE MODULE DIN JOC TREBUIE SA REACTIONEZE IN CONSECINTA
 
 
 **MEMENTO
-6. Jucatorii au posibilitatea sa salveze starea jocului/caracterului si sa o restaureze mai tarziu
+=> salvare + restaurare + istoric
+=> diferenta state vs memento: la memento doar salvam starea obiectului, nu avem comportament diferit
+in functie de stare
+=> exemplu: Google Docs si auto-save-ul lor si poti face restore
+6. Jucatorii au posibilitatea SA SALVEZE STAREA JOCULUI/CARACTERULUI si SA O RESTAUREZE MAI TARZIU
 - jucatorul poate relua jocul dintr-un anumit punct
 

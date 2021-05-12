@@ -5,10 +5,12 @@
 **DECORATOR: keyword = run-time
 2. Modificarea in timpul jocului a caracteristicilor unor super-eroi
 - in timpul jocului super-eroii pot fi dotati cu echipamente noi
-- comportamentul super-eroului se poate modifica dinamic in functie de interactiunea cu celelalte caractere din joc
+- comportamentul super-eroului se poate modifica dinamic in functie de interactiunea 
+cu celelalte caractere din joc
 
 **FACADE
-3. Pentru a permite altor companii sau jucatorilor sa dezvolte solutii externe care sa se conecteze la joc trebuie dezvoltata o librarie (un API)
+3. Pentru a permite altor companii sau jucatorilor sa dezvolte solutii externe 
+care sa se conecteze la joc trebuie dezvoltata o librarie (un API)
 - API-ul contine multe clase cu multe detalii
 - nu toate clasele sunt documentate
 - API-ul trebuie sa ofere o interfata simplificata pentru un set de functii de baza
@@ -23,7 +25,8 @@ Pentru dezvoltarea unui joc online (cu supereroi) sa se dezvolte o solutie softw
 - UN GRUP POATE CONTINE CARACTERE CONTROLATE de jucatori sau alte grupuri
 
 **FLYWEIGHT -> se aplica de la inceput (din partea de analiza), nu se poate adapta
-5. Pentru A GESTIONA EFICIENT (DIN PUNCTUL DE VEDERE AL MEMORIEI) scenariile in care jucatorii interactioneaza cu 
+5. Pentru A GESTIONA EFICIENT (DIN PUNCTUL DE VEDERE AL MEMORIEI) scenariile 
+in care jucatorii interactioneaza cu 
 mai multe caractere controlate de calculator
 - colectia de caractere coordonate de calculator CONTINE ELEMENTE DE ACELASI FEL (aceleasi modele 3D)
 - spatiul ocupat de un model 3D este semnificativ
@@ -36,43 +39,9 @@ mai multe caractere controlate de calculator
 		=> pentru solutii ad-hoc, nu stii ce e acolo, dar ai nevoie sa faca ceva
 		=> conectare in cloud in continuare, dar vrei sa faci si log-uri
 6. Adaugarea unui filtru suplimentar pentru login
-- in acest moment login-ul se face prin username si parola si in cazul in care parola este gresita utilizatorul poate incerca de mai multe ori
-- exista atacuri asupra conturilor jucatorilor iar atacatorul ghiceste parola aferenta contului dupa mai multe incercari
+- in acest moment login-ul se face prin username si parola si in cazul in care parola 
+este gresita utilizatorul poate incerca de mai multe ori
+- exista atacuri asupra conturilor jucatorilor iar atacatorul ghiceste 
+parola aferenta contului dupa mai multe incercari
 - SE DORESTE MODIFICAREA MODULULUI DE LOGIN PRIN LIMITAREA NUMARULUI DE INCERCARI LA MAXIM 3
 - MODULUL DE LOGIN EXISTENT TREBUIE MODIFICAT FARA A INTRERUPE JOCUL
-
-
-**STRATEGY
-7. In functie de implicarea in joc (timp petrecut, activitate in timpul jocului, etc) jucatorii primesc puncte bonus. 
-Aceasta strategie este stabilita de departamentul de marketing si se modifica in functie de alte campanii, perioada anului, etc.
-Sa se gaseasca o solutie care sa permita:
-- modificarea strategiei de acordare a bonusului la runtime fara a modifica implementarea jocului
-
-
-**STATE MACHINE
-8. Comportamentul caracterul este influentat de stare lui
-- daca acesta este ranit miscarile sunt afectate
-- daca este afectat de actiunile magice ale celorlalti
-
-
-**CHAIN OF RESPONSIBILITY
-=> evenimentul este transmiterea mesajelor
-=> mai jos avem 3 scenarii si trebuie sa il tratam diferit in functie de cele 3 scenarii
-=> prelucram evenimentul in functie de aceste "bullet-uri"
-=> ne pregatim pentru: o lista mai mare de bullet-uri pe viitor
-9. Jocul are un chat intern
-- vrem sa filtram comentariile / mesajele care nu sunt potrivite
-- mesajele destinate unui anumit player vor fi private
-- difuzare mesaje destinate tuturor
-
-
-**COMMAND
-=> multi-threading
-10. Clientul jocului trebuie sa efectueze sarcini in fundal fara a interfera cu derularea jocului (fara a-l bloca sau incetini)
-- backup de date client
-- primeste actualizari pentru forum
-- actualizati modele 3d
-- trebuie gasita o solutie prin care aceste task-uri sa fie executate fara a afecta executia jocului
-
-
-

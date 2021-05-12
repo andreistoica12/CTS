@@ -1,0 +1,53 @@
+**STRATEGY
+1. In functie de implicarea in joc (timp petrecut, activitate in timpul jocului, etc) 
+jucatorii primesc puncte bonus. 
+Aceasta strategie este stabilita de departamentul de marketing si se modifica 
+in functie de alte campanii, perioada anului, etc.
+Sa se gaseasca o solutie care sa permita:
+- modificarea strategiei de acordare a bonusului la runtime fara a modifica implementarea jocului
+
+
+**STATE MACHINE
+2. Comportamentul caracterul este influentat de stare lui
+- daca acesta este ranit miscarile sunt afectate
+- daca este afectat de actiunile magice ale celorlalti
+
+
+**CHAIN OF RESPONSIBILITY
+=> evenimentul este transmiterea mesajelor
+=> mai jos avem 3 scenarii si trebuie sa il tratam diferit in functie de cele 3 scenarii
+=> prelucram evenimentul in functie de aceste "bullet-uri"
+=> ne pregatim pentru: o lista mai mare de bullet-uri pe viitor
+3. Jocul are un chat intern
+- vrem sa filtram comentariile / mesajele care nu sunt potrivite
+- mesajele destinate unui anumit player vor fi private
+- difuzare mesaje destinate tuturor
+
+
+**COMMAND
+=> multi-threading
+4. Clientul jocului trebuie sa efectueze sarcini in fundal fara a interfera cu derularea jocului 
+(fara a-l bloca sau incetini)
+- backup de date client
+- primeste actualizari pentru forum
+- actualizati modele 3d
+- trebuie gasita o solutie prin care aceste task-uri sa fie executate fara a afecta executia jocului
+
+
+**OBSERVER
+=> similar butonului de la PAW (de fiecare data cand dau click, un event handler trateaza evenimentul)
+=> diferenta chain vs observer: handlerele nu trebuie sa fie inlantuite
+=> Observabilul: obiectul care anunta abonatii ca s-a intamplat un eveniment
+5. In timpul jocului clientul POATE PIERDE CONEXIUNEA LA SERVER (din diferite motive). 
+Cand acest lucru se intampla, 
+DIFERITELE MODULE DIN JOC TREBUIE SA REACTIONEZE IN CONSECINTA
+- trebuie salvata instanta jocului pe masina clientului
+- trebuie salvate atributele caracterului
+- trebuie notificat clientul
+- trebuie reincercata conexiunea
+
+
+**MEMENTO
+6. Jucatorii au posibilitatea sa salveze starea jocului/caracterului si sa o restaureze mai tarziu
+- jucatorul poate relua jocul dintr-un anumit punct
+

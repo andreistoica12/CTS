@@ -10,11 +10,13 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import ro.ase.csie.cts.sem13.testare.exceptii.ExceptieNota;
 import ro.ase.csie.cts.sem13.testare.exceptii.ExceptieNume;
 import ro.ase.csie.cts.sem13.testare.exceptii.ExceptieVarsta;
 import ro.ase.csie.cts.sem13.testare.modele.Student;
+import ro.ase.csie.cts.sem14.testare.teste.categorii.TesteImportante;
 
 public class TestStudent {
 
@@ -116,6 +118,7 @@ public class TestStudent {
 		assertEquals("Test fara note", notaMinima, notaMinimaCalculata);
 	}
 
+	@Category(TesteImportante.class)
 	@Test
 	public void testGetNotaMinimaCardinalityUnu() throws ExceptieNota {
 		ArrayList<Integer> note = new ArrayList<>();
